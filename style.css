@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --sidebar-color: #f2f7fa;
+    --body-color: #f2f7fa;
+    --primary-color: #bfe7f1;
+    --button-color: #55adc3;
+    --hover-color: #e3f2f9;
+    --active-color: #7d7d7d;
+    --text-black-color: #393939;
+    --text-white: #f7ffff;
+    --text-gray: #b9bec4;
+    --card-color: #ffffff;
+    --search-color: #b2e1ed9b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--body-color);
+    width: 100%;
+    height: 100vh;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    padding: 8px;
+    background: var(--sidebar-color);
+}
+
+.sidebar .logo {
+    font-size: 1.1rem;
+    color: var(--button-color);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sidebar .navbar {
+    margin-top: 40px;
+}
+
+.sidebar .navbar .nav-links {
+    padding: 20px 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    border-left: 4px solid transparent;
+    height: 50px;
+    margin-bottom: 10px;
+    transition: 0.5s ease;
+}
+
+.sidebar .navbar .nav-links.active a {
+    color: var(--active-color);
+}
+
+.sidebar .navbar .nav-links a {
+    color: var(--text-gray);
+}
+
+.sidebar .navbar .nav-links .icon {
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.sidebar .navbar .nav-links.active {
+    border-left: 4px solid var(--button-color);
+    background: var(--hover-color);
+    font-weight: 500;
+}
+
+.sidebar .navbar .nav-links:hover {
+    border-left: 4px solid var(--button-color);
+    background: var(--hover-color);
+}
+
+/* home section */
+.home {
+    position: relative;
+    left: 200px;
+    width: calc(100% - 200px);
+    height: 120vh;
+    background: linear-gradient(180deg, var(--primary-color), var(--body-color));
+    padding: 20px 40px;
+}
+
+.home .heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home .heading .search {
+    width: 270px;
+    height: 40px;
+    padding: 10px;
+    background: var(--search-color);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.home .heading .search input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: black !important;
+    background: transparent;
+}
+
+.home .heading .search input::placeholder {
+    color: #a2a2a293;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.home .heading .search i {
+    font-size: 1.2rem;
+    color: var(--button-color);
+}
+
+.profile-icon {
+    display: flex;
+    gap: 20px;
+}
+
+.profile-icon i {
+    font-size: 1.5rem;
+    color: var(--button-color);
+}
+
+.home .main-heading {
+    display: flex;
+}
+
+.home .main-heading .left-heading {
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+.home .main-heading .left-heading h1 {
+    font-size: 3rem;
+    width: 400px;
+    color: var(--text-white);
+}
+
+.home .main-heading .left-heading p {
+    margin-top: 5px;
+    width: 600px;
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+.home .main-heading .left-heading .CTA {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.home .main-heading .left-heading .CTA .listen {
+    width: 130px;
+    height: 30px;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    background: var(--button-color);
+    color: var(--text-white);
+}
+
+.home .main-heading .left-heading .CTA .listen span {
+    margin-left: 30px;
+}
+
+.home .main-heading .left-heading .CTA .listen i {
+    font-size: 1.4rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--text-white);
+    color: var(--button-color);
+    margin-left: 19px;
+    z-index: 1;
+}
+
+.home .main-heading .left-heading .CTA .listen i::before{
+    content: "<i class="ri-play-fill"></i>";
+    position: absolute;
+    z-index: -1;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff89;
+    border-radius: 50px;
+    color: var(--button-color);
+}
+
+.home .main-heading .left-heading .CTA .bookmark {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50px;
+    background: var(--button-color);
+    color: var(--text-white);
+}
+
+.right-heading img {
+    margin-top: -40px;
+}
+
+.home .top-hits h1 {
+    font-size: 1.4rem;
+    color: var(--button-color);
+    margin-top: -100px;
+    margin-bottom: 20px;
+}
+
+.top-hits-list {
+    width: 100%;
+    height: 230px;
+    display: flex;
+    gap: 20px;
+}
+
+.top-hits-list .top-hit {
+    width: 170px;
+    height: 230px;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    transition: 0.5s ease;
+}
+
+.top-hits-list .top-hit:hover {
+    background: var(--text-white);
+    box-shadow: -1px 5px 10px #55adc324;
+}
+
+.top-hits-list .top-hit .image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-hits-list .top-hit img {
+    position: relative;
+    width: 140px;
+    margin-top: 10px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: -1px 5px 10px #55adc383;
+    transition: 0.5s ease;
+}
+
+.top-hits-list .top-hit:hover img{
+    box-shadow: none;
+}
+
+.top-hits-list .top-hit i {
+    position: absolute;
+    font-size: 3rem;
+    color: transparent;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+}
+
+.top-hits-list .top-hit:hover i {
+    color: var(--text-white);
+}
+
+.top-hits-list .top-hit .content h2 {
+    font-size: 0.9rem;
+    text-align: center;
+    color: var(--text-black-color);
+    margin-top: 10px;
+}
+
+.top-hits-list .top-hit .content p {
+    font-size: 0.7rem;
+    text-align: center;
+    color: var(--text-gray);
+    margin-top: 5px;
+}
